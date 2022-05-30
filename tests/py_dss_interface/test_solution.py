@@ -407,9 +407,7 @@ class TestSolution13Bus:
         assert expected == actual
 
     def test_solution_step_size_hr(self):
-        expected = 0
         actual = self.dss.solution_step_size_hr()
-        assert expected == 0
 
     def test_solution_process_time(self):
         expected = 0

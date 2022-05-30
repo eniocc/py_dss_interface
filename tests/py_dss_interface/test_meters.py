@@ -257,7 +257,7 @@ class TestMeters13Bus:
 
     def test_meters_write_peak_current(self):
         expected = [550.0, 600.0, 680.0]
-        expected_str = '(' + str(expected[0]) + ',' + str(expected[1]) + ',' + str(expected[2]) + ')'
+        expected_str = f'({str(expected[0])},{str(expected[1])},{str(expected[2])})'
         self.dss.meters_write_peak_current(expected_str)
         actual = self.dss.meters_read_peak_current()
         assert expected == actual

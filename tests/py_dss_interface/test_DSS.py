@@ -15,7 +15,7 @@ def dss():
     actual = dss.started
     expected = True
 
-    message = ("OpenDSSDirectDLL has been loaded: {}".format(actual))
+    message = f"OpenDSSDirectDLL has been loaded: {actual}"
 
     assert actual is expected, message
 
@@ -32,7 +32,7 @@ class TestDSS(object):
         actual = self.dss.started
         expected = True
 
-        message = ("OpenDSSDirectDLL has been loaded: {}".format(actual))
+        message = f"OpenDSSDirectDLL has been loaded: {actual}"
 
         assert actual is expected, message
 
@@ -40,6 +40,6 @@ class TestDSS(object):
         assert self.dss.dss_version is not None
 
     def test_solution_totaliterations(self):
-        self.dss.text("compile " + dss13_path)
+        self.dss.text(f"compile {dss13_path}")
 
         assert self.dss.solution_total_iterations() == 11

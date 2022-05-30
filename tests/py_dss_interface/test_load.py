@@ -239,8 +239,6 @@ class TestLoad13Bus:
             expected = 0.8682431421244591
             actual = self.dss.loads_read_pf()
             assert actual == expected
-        else:
-            assert 1 == 1
 
     def test_loads_write_pf(self):
         expected = 1.0  # TODO it only works when we set decimal number. Like in capacitors.
@@ -330,8 +328,6 @@ class TestLoad13Bus:
             expected = (self.dss.loads_read_kw() ** 2 + self.dss.loads_read_kvar() ** 2) ** (1 / 2)
             actual = self.dss.loads_read_kva()
             assert actual == expected
-        else:
-            assert 1 == 1
 
     def test_loads_write_kva(self):
         expected = 1500.0  # TODO it only works when we set decimal number.
